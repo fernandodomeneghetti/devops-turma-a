@@ -35,3 +35,29 @@ jobs:
                 app-name: aula-devops-turma-a-unianchieta
                 publish-profile: ${{ secrets.PUBLISH_PROFILE }}
                 image: domeneghetti/aula-devops-gravacao:latest
+    
+    integration-test:
+        name: test-e2e
+        runs-on: ubuntu-latest
+        needs: deploy
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4.2.2
+              with:
+                fetch-depth: 0
+            
+            - name: Setup Nodejs
+              uses: actions/setup-node@v3.9.1
+              with:
+                node-version: '20'
+            
+            - name: Install packages
+              run: |
+                cd integration-test
+                npm install
+
+            - name: Run Cypress E2E Test
+              run: |
+                cd integration-test
+                npx cypress run
