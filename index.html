@@ -43,14 +43,19 @@
 
     <script>
         function testeNaoSeguro() {
-            fetch('http://example.com/api')
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data);
+            fetch('http://example.com/api', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: 'Faculdade Tech',
+                    email: ''
                 })
-                .catch(error => {
-                    console.error('Erro:', error);
-                });
+            }                
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error('Erro:', error)));
         }
 
 
