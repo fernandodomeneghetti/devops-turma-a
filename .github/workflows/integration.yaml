@@ -21,7 +21,7 @@ jobs:
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         with:
           args: >
-            -Dsonar.projectKey=devops-turma-b
+            -Dsonar.projectKey=devops-turma-c
             -Dsonar.projectName=devops-turma-b
             -Dsonar.projectVersion=1.0.0
             -Dsonar.sources=.
