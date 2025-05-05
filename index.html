@@ -18,11 +18,41 @@
     </nav>
     <div class="container">
         <h2>Bem-vindo à Faculdade Tech</h2>
-        <p>Explore nossos cursos e invista no seu futuro!</p>
+        <p>Explore nossos cursos e invista no seu futuro!!!</p>
         <a href="cursos.html" class="btn">Saiba Mais</a>
+
+        <table border="1">
+            <tr>
+                <td>Titulo</td>
+                <td>Observação</td>
+            </tr>
+            <tr>
+                <td>Aula CI</td>
+                <td>Tem video</td>
+            </tr>
+            <tr>
+                <td>Aula CD</td>
+                <td>Tem video também</td>
+            </tr>
+        </table>
+
     </div>
     <footer>
         <p>&copy; 2025 Faculdade Tech - Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        function testeNaoSeguro() {
+            fetch('http://example.com/api')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                })
+                .catch(error => {
+                    console.error('Erro:', error);
+                });
+        }
+    </script>
+
 </body>
 </html>
