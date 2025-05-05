@@ -18,11 +18,58 @@
     </nav>
     <div class="container">
         <h2>Bem-vindo à Faculdade Tech</h2>
-        <p>Explore nossos cursos e invista no seu futuro!</p>
+        <p>Explore nossos cursos e invista no seu futuro!!!</p>
         <a href="cursos.html" class="btn">Saiba Mais</a>
+
+        <table border="1">
+            <tr>
+                <th>Titulo</th>
+                <th>Observação</th>
+            </tr>
+            <tr>
+                <td>Aula CI</td>
+                <td>Tem video</td>
+            </tr>
+            <tr>
+                <td>Aula CD</td>
+                <td>Tem video também</td>
+            </tr>
+        </table>
+
     </div>
     <footer>
         <p>&copy; 2025 Faculdade Tech - Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        function testeNaoSeguro() {
+            fetch('https://example.com/api', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: 'Faculdade Tech',
+                    email: ''
+                })
+            }                
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error('Erro:', error)));
+        }
+
+
+        function VariaveisNaoUsadas() {
+            const numUm = 1;
+            const NumDois = 2;
+
+            if (numUm > NumDois) {
+                console.log('numUm é maior que NumDois');
+            } else {
+                console.log('NumDois é maior que numUm');
+            }
+        }
+    </script>
+
 </body>
 </html>
