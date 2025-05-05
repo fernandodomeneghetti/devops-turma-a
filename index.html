@@ -23,8 +23,8 @@
 
         <table border="1">
             <tr>
-                <td>Titulo</td>
-                <td>Observação</td>
+                <th>Titulo</th>
+                <th>Observação</th>
             </tr>
             <tr>
                 <td>Aula CI</td>
@@ -43,7 +43,7 @@
 
     <script>
         function testeNaoSeguro() {
-            fetch('http://example.com/api', {
+            fetch('https://example.com/api', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -60,9 +60,14 @@
 
 
         function VariaveisNaoUsadas() {
-            var a = 1;
+            const numUm = 1;
+            const NumDois = 2;
 
-            b = 2;
+            if (numUm > NumDois) {
+                console.log('numUm é maior que NumDois');
+            } else {
+                console.log('NumDois é maior que numUm');
+            }
         }
     </script>
 
